@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>hello</title>
+        <style>
+           .xyz{
+               color: white;
+               background-color: aqua;
+           }
+        </style>
+    </head>
+    <body>
+        <h3 id="demo">mouse</h3>
+
+        <ul id="listone">
+            <li>first</li>
+            <li>second</li>
+            <li>third</li>
+            <li>fourth</li>
+        </ul>
+        <ul id="listtwo">
+            <li>india</li>
+            <li>australia</li>
+            <li>srilanka</li>
+            <li>usa</li>
+        </ul>
+        
+        
+          <script>
+              
+
+console.log(document.all);
+let x = document.querySelectorAll("#listone")[0].innerHTML;
+console.log(x);
+
+document.getElementById("demo").addEventListener("dblclick",()=>{
+    document.getElementById("demo").style.color = "green";
+});
+document.getElementById("demo").addEventListener("click",()=>{
+    document.getElementById("demo").style.border = "10px solid red";
+});
+document.getElementById("demo").removeEventListener("mouseleave",()=>{
+    document.getElementById("demo").style.border = "10px solid red";
+});
+
+const  element1 = document.createElement("li");
+const text1 = document.createTextNode("text node one");
+element1.appendChild(text1);
+const target1 = document.getElementById("listone");
+target1.appendChild(element1);
+
+const element2 = document.createElement("li");
+const text2 = document.createTextNode("text node 2");
+element2.appendChild(text2);
+const target2 = document.getElementById("listtwo");
+target2.insertBefore(element2,target2.children[0]);
+
+const htmlelement = "<li>this is html elem</li>"
+const target3 = document.getElementById("listone");
+target3.insertAdjacentHTML("afterbegin",htmlelement);
+
+document.getElementById("listtwo").classList.add("xyz");
+document.getElementById("listtwo").classList.remove("xyz");
+
+
+const addition = (bless,...arg) =>{
+    let sum = 0;
+    for(let i in arg){
+        sum += arg[i];
+    };
+    console.log(sum);
+    console.log(bless);
+        
+};
+addition("hello",50,10,20,120);
+
+const arradd=(bless1,...args) =>{
+    let sum = 0;
+    for(let i in args){
+        sum+=args[i];
+    }
+    console.log(sum);
+};
+let arr = [2,5,3];
+arradd("hello",...arr);
+
+
+let _arr1 = [4,5,6];
+let _arr2 = [7,8,9]
+
+let _arr3 = [..._arr1,..._arr2];
+console.log(_arr3);
+
+//let myData = ["maneesh",46,"bawal"];
+//const[name,age,city] = myData;
+//console.log(name);
+//console.log(age);
+//console.log(city);
+
+//const spread = ([name,age,city]) =>{
+  //  console.log(city);
+//};
+//spread(["maneesh",33,"bawal"]);
+
+//const spread = ()=>{
+  //  return ["maneesh",33,"bawal"];
+//};
+//let[name,age,city] = spread();
+//console.log(age);
+
+let user = {
+    name:"maneesh",
+    age:44,
+    city:"bawal"
+};
+let{name,age,city} = user;
+
+console.log(`${name} ${age}`);
+
+let user1 = {
+    dob:1996
+};
+let spr = {...user,...user1};
+console.log(spr);
+
+class Grocery{
+    constructor(milk,wheat,rice){
+        this.milk = milk;
+        this.wheat = wheat;
+        this.rice = rice;
+    }
+    total(){
+        return this.milk +" "+this.wheat;
+    }
+};
+
+class Clothes extends Grocery {
+    constructor(milk,wheat,rice,shirt){
+        super(milk,wheat,rice)
+            this.shirt = "3 pair";
+    }
+    static price(a,b){
+        return a+b;
+    }
+};
+Object.prototype.veg  = "8kg";
+let items = new Grocery("10 Litres","20 kg","5kg");
+console.log(items.milk);
+console.log(items.total());
+console.log(items.veg);
+
+let cloth = new Clothes("10 Litres","20 kg","5kg","3pair");
+console.log(cloth.shirt);
+console.log(cloth.rice);
+console.log(Clothes.price(10000,20000));
+
+
+          </script>  
+        </body>
+        </html>

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>hello</title>
+        <style>
+            h1{
+                color:red;
+                font-size: 50px;
+                font-weight: bold;
+                border: 3px solid green;
+                text-align: center;
+                background-color: blueviolet;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>ANJANA</h1>
+
+        <script>
+            function myfunction(a,b){
+    return a+b;
+};
+let result = myfunction(7,4);
+console.log(result);
+
+const convert = function(f){
+    return 5/9*(f-32);
+};
+console.log(convert(55));
+
+let fruits = {
+    orange:500,
+    mango:700,
+    apple:300,
+    total:function(){
+        return this.orange+this.apple+this.mango;
+    }
+};
+console.log(fruits);
+console.log(fruits.total());
+for(let i in fruits){
+    console.log(i);
+    document.write(i + "<br>");
+};
+
+let str = `  my name is anything`;
+console.log(str.length);
+console.log(str.charAt(5));
+console.log(str.slice(-7,-1));
+console.log(str.substr(4,9));
+console.log(str.replace("my","MY"));
+console.log(str.toLocaleLowerCase());
+console.log(str.toUpperCase());
+console.log(str.trim());
+console.log(str.split());
+console.log(str.indexOf("name"));
+
+let num = 100;
+console.log(isNaN(num));
+
+let x = parseInt("10.98");
+console.log(x);
+
+let arr = ["orange","apple","banana"];
+console.log(arr);
+console.log(arr[0]);
+console.log(arr.push("mango"));
+console.log(arr);
+arr.shift();
+console.log(arr);
+arr.unshift("papaya");
+console.log("arr");
+
+arr.forEach(function(value){
+    console.log(value);
+});
+arr.pop();
+console.log(arr);
+arr[0]="toto";
+console.log(arr);
+
+let arr1 = ["my","he","him"];
+let newarr = arr.concat(arr1);
+console.log(newarr);
+arr.splice(2,0,34,54);
+console.log(arr);
+arr.slice(2);
+console.log(arr);
+arr.sort();
+console.log(arr);
+arr.reverse();
+console.log(arr);
+let numarr = [4,6,3,8];
+numarr.sort(function(a,b){
+    return a-b ;
+});
+console.log(numarr);
+let y = 1;
+if(y==0){
+    console.log("hello");
+}else{
+    console.log("false");
+};
+
+while (y<=10) {
+    console.log("true");
+    y++;
+};
+do{
+    console.log("loop");
+    y++;
+}while(y<=10);
+
+let names = {
+    class:"maneesh",
+    home:"ronak"
+};
+for(let j in names){
+    console.log(names);
+};
+let ind = [5,55,88,43,76];
+ind.forEach(function(value,index){
+    console.log(index+" "+value);
+});
+ind.map(function(value,index){
+    console.log(index+" "+value*5);
+});
+let results = ind.filter(function(value){
+    return value>20;
+    
+});
+console.log(results);
+
+for(let k of ind){
+    console.log(k);
+};
+
+
+for(let val = 1;val<=10;val++){
+    if(val==4){continue;}
+    console.log(val);
+};
+
+let classes = new Set();
+classes.add("ist");
+classes.add("2nd");
+classes.add("3rd");
+
+classes.forEach(function(value){
+    console.log(value);
+});
+
+classes.delete("2nd");
+console.log(classes);
+console.log(classes.values());
+for(let l of classes.values()){
+    console.log(l);
+};
+let roll = new Map();
+roll.set("maneesh",12);
+roll.set("ravi",17);
+roll.set("anoop",67);
+
+roll.forEach(function(value){
+    console.log(value);
+});
+console.log(roll.entries());
+for(let m of roll.entries()){
+    console.log(m);
+};
+console.log(roll.entries());
+for(let n of roll.entries()){
+    console.log(n);
+};
+let word = "self";
+console.log(typeof(word));
+let nums = 43;
+console.log(typeof(nums));
+console.log(typeof(true));
+console.log(typeof(fruits));
+console.log(typeof(Date));
+console.log(typeof(new Date));
+console.log(typeof(ind));
+console.log(typeof null);
+console.log(typeof undefined);
+let variable;
+console.log(typeof variable);
+let r = 3.555;
+let s = r.toExponential(2);
+console.log(s);
+
+class Car{
+    constructor(name,age){
+        this.carname = name;
+        this.carage = age;
+    }
+};
+const myCar = new Car("city",10);
+console.log(myCar.carname+" "+myCar.carage);
+const myobj = {
+    cars:[
+        {
+            name:"Ford",models:["Focus",400]
+        },
+        {
+            name:"BMW",models:["X3",600]
+        },
+        {
+            name:"Fiat",models:["Panda",800]
+        }
+    ]
+};
+
+for(let b in myobj.cars){
+    console.log(myobj.cars[b].name);
+    document.write(myobj.cars[b].name);
+    for(let c in myobj.cars[b].models){
+        console.log(myobj.cars[b].models[c]);
+    }
+};
+
+let list = {
+    food:30000,
+    cash:20000,
+    other:"else",
+    total:function(){
+        return this.food+this.cash +" "+ this.other.toUpperCase();
+    }
+};
+console.log(list.total());
+let mResult = Object.values(list);
+console.log(mResult+"<br><br><br>");
+
+function param(a,b,c){
+    return a+b+c;
+};
+let parameter = param(35,45,55);
+document.write(parameter);
+console.log(parameter);
+function square(e){
+    return 4*e;
+};
+console.log(square(5));
+
+
+for(let s = 0;s<=100;s++){
+    if(s%2==1){
+        console.log(s);
+    }
+};
+function Person(name,age,city){
+    this.ename = name;
+    this.eage = age;
+    this.ecity = city;
+    this.details = function(){
+        return this.ename;
+    }
+}
+Person.prototype.nationality = "indian";
+let Eperson = new Person("maneesh",25,'bawal');
+console.log(Eperson.ename+" "+Eperson.eage+" "+Eperson.ecity+" "+Eperson.nationality);
+console.log(Eperson.details());
+
+class Subject {
+    constructor(_ist,_2nd,_3rd){
+        this.first = _ist;
+        this.second = _2nd;
+        this.third = _3rd; 
+    }
+    mis(_4th,_5th){
+        return this.first+" "+this.second;
+    }
+}
+let Sub = new Subject("physics","chemistry","math");
+console.log(Sub.first);
+console.log(Sub.mis());
+
+let colors = {
+    red:"yes",
+    yellow:"no",
+    allColor:function(paint,plastic){
+        return this.red+' '+this.yellow+` ${paint} ${plastic}`; 
+    }
+};
+
+let colors1 = {
+    red:"no",
+    yellow:"yes"
+};
+console.log(colors.allColor());
+console.log(colors.allColor.call(colors1,"blue","green"));
+console.log(colors.allColor.apply(colors1,["blue","green"]));
+
+let anewarr = [5,6,3,6,9];
+let maxiimum = Math.max.apply(null,anewarr);
+console.log(maxiimum);
+
+function makeFunc(){
+    let name = "Mozzila";
+    function displayName(){
+        console.log(name);
+    }
+    return displayName;
+}
+let myFunc = makeFunc();
+myFunc();
+
+function makeAdder(x){
+    return function sums(y){
+        return x + y;
+    }
+};
+let sum1 = makeAdder(5);
+console.log(sum1(10));
+
+(()=>{
+    console.log(10+20);
+})();
+let mywish = "good luck";
+let wish = () =>{
+      function wishing(){
+          return (mywish);
+      }
+
+      wishing();
+};
+let wishes = wish();
+console.log(wishes);
+setTimeout(() => {
+    console.log(`i will give u a chance`);
+}, 3000);
+
+const loaddata = () =>{
+let req = new XMLHttpRequest();
+req.onreadystatechange = function(){
+    if(this.readyState == 4 & this.status == 200){
+        console.log(req.responseText);
+    }else{
+        console.log(req.status);
+    };
+    
+}
+req.open("GET","./practice.js",true);
+    req.send();
+}
+loaddata();
+ 
+ async function getData(){
+return new Promise(function(resolve,reject){
+    let req = new XMLHttpRequest();
+    req.onload = function(){
+        if(this.status == 200){
+            resolve(req.response);
+        }else{
+            reject("hello")
+        };
+    }
+    req.open("GET","https://jsonplaceholder.typicode.com/posts",true);
+    req.send();
+})
+};
+getData().then(function(myresult){
+    console.log(myresult);
+
+}).catch(function(err){
+    console.log(err)
+});
+
+
+
+  async function getfile(file){
+      let myfile = await fetch(file);
+      let mytext = await myfile.json();
+      console.log(mytext);
+  };
+  getfile('https://jsonplaceholder.typicode.com/todos/1')
+
+
+     </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

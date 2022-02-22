@@ -1,0 +1,22 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.form-control1{
+    border-radius: 40px;
+    margin-left: -70px;
+}
+.btn1{
+    border: 1px solid white;
+    padding: 3px 15px !important;
+}
+.border1{
+    border-bottom: 1px solid gray;
+}
+.link{
+    text-decoration: none;
+}
+.link:hover{
+    font-size: large;
+}

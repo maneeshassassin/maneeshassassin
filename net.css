@@ -1,0 +1,22 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.container_color{
+    background-color: rgba(47, 47, 47, 0.293) !important;
+}
+.thumbnail{
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.388);
+}
+.img1{
+    border-radius: 50%;
+}
+caption{
+    background-color:  rgba(47, 47, 47, 0.245)!important;
+
+}
+img:hover{
+    opacity: 0.8;
+}
